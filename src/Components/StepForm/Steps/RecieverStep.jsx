@@ -4,13 +4,9 @@ import styles from "../Step.module.scss"
 import Button from "../../Button"
 
 
-const RecieverStep = ({title}) => {
+const RecieverStep = ({title,handlePrevious,handleNext}) => {
   let cx = classNames.bind(styles);
-  const handlePrevious=()=>{
-  }
-  const handleNext=()=>{
-    
-  }
+
 
   return (
     <div className={cx('step')}>

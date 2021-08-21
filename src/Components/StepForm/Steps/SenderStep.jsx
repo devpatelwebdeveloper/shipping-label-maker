@@ -4,13 +4,9 @@ import styles from "../Step.module.scss"
 import Button from "../../Button"
 
 
-const SenderStep = ({title}) => {
+const SenderStep = ({title,handleNext}) => {
   let cx = classNames.bind(styles);
-  const handlePrevious=()=>{
-  }
-  const handleNext=()=>{
-    
-  }
+
 
   return (
     <div className={cx('step')}>
@@ -38,7 +34,6 @@ const SenderStep = ({title}) => {
         </div>
       </div>
     <div className={cx('button-container')}>
-      <Button text="Previous" theme="secondary" onClick={handlePrevious}/>
       <Button text="Next" theme="primary" onClick={handleNext}/>
     </div>
     </div>
