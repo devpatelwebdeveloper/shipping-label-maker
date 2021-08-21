@@ -7,24 +7,24 @@ const ShippingForm = () => {
 
   const [state, setState] = useState({
     from: {
-      name: "",
-      street: "",
-      city: "",
-      state: "",
-      zip: "",
+      name: "Devashish Patel",
+      street: "110 Activa Ave",
+      city: "Kitchener",
+      state: "ON",
+      zip: "12345",
     },
     to: {
-      name: "",
-      street: "",
-      city: "",
-      state: "",
-      zip: "",
+      name: "Khushbu Patel",
+      street: "1430 Highland Road W",
+      city: "Kitchener",
+      state: "ON",
+      zip: "12345",
     },
-    weight: 0,
-    shippingOption: 0,
+    weight: 10.6,
+    shippingOption: 1.5,
   })
   const [errors, setErrors] = useState()
-  const { mode, transition } = useVisualMode(1)
+  const { mode, transition } = useVisualMode(5)
 
   const handleNext=(event)=>{
     event.preventDefault()
