@@ -4,12 +4,20 @@ import styles from "../Step.module.scss"
 import Button from "../../Button"
 
 
-const PackageInfo = ({title}) => {
+const PackageInfo = ({title,handlePrevious,handleNext, setInputValue, state, errors, setState, setErrors}) => {
   let cx = classNames.bind(styles);
-  const handlePrevious=()=>{
-  }
-  const handleNext=()=>{
-    
+
+  const changeHandler=(name,value)=>{
+    setState({
+      ...state,
+      [name]:parseFloat(value)
+    }
+    )
+    // setErrors({
+    //   ...errors,
+    // [name]:null
+    // }
+    // )
   }
 
   return (
@@ -18,7 +26,7 @@ const PackageInfo = ({title}) => {
       <div className={cx('step-form')}>
         <div className={cx('form-field')}>
           <label htmlFor="name" className={cx('label')}>Name:</label>
-          <input type="text" id="name" className={cx('input')}/>
+          <input type="text" id="name" className={cx('input')} onChange={e=>{changeHandler('weight',e.target.value)}}/>
         </div>
       
       </div>
