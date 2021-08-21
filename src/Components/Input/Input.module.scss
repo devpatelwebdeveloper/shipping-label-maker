@@ -1,0 +1,25 @@
+.text-input {
+	width: 100%;
+	// max-width: 360px;
+	margin-left: 0px;
+	margin-right: inherit;
+	input[type="text"],
+	input[type="email"],
+	input[type="tel"],
+	textarea {
+		background-color: #ffffff;
+		border-radius: 2px;
+		padding: 8px;
+		border: 1px solid blue;
+		font-size: 1rem;
+		margin-bottom: 1rem;
+		width: 100%;
+		color: #f5f5f5;
+		&.error {
+			outline: red auto 4px;
+		}
+	}
+	textarea {
+		resize: none;
+	}
+}
