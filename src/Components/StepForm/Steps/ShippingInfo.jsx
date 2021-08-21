@@ -10,7 +10,7 @@ const ShippingInfo = ({title,handlePrevious,handleNext, setInputValue, state, er
   const changeHandler=(name,value)=>{
     setState({
       ...state,
-      [name]:value
+      [name]:parseFloat(value)
     }
     )
     // setErrors({
@@ -26,10 +26,10 @@ const ShippingInfo = ({title,handlePrevious,handleNext, setInputValue, state, er
       <div className={cx('step-form')}>
         <div className={cx('form-field')}>
           <label htmlFor="shipping" className={cx('label')}>Shipping Option:</label>
-          <select id="shipping" onChange={e=>{changeHandler('shipping',e.target.value)}}>
+          <select id="shipping" onChange={e=>{changeHandler('shippingOption',e.target.value)}}>
             <option>Select shipping Option</option>
-            <option value="ground">Ground</option>
-            <option value="priority">Priority</option>
+            <option value="1">Ground</option>
+            <option value="1.5">Priority</option>
           </select>
         </div>
       

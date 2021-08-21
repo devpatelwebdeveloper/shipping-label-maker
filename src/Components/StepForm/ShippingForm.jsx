@@ -21,10 +21,10 @@ const ShippingForm = () => {
       zip: "",
     },
     weight: 0,
-    shipping: "",
+    shippingOption: 0,
   })
   const [errors, setErrors] = useState()
-  const { mode, transition } = useVisualMode(4)
+  const { mode, transition } = useVisualMode(1)
 
   const handleNext=(event)=>{
     event.preventDefault()
