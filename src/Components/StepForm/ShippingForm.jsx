@@ -20,11 +20,11 @@ const ShippingForm = () => {
       state: "",
       zip: "",
     },
-    weight: "",
+    weight: 0,
     shipping: "",
   })
   const [errors, setErrors] = useState()
-  const { mode, transition } = useVisualMode(1)
+  const { mode, transition } = useVisualMode(4)
 
   const handleNext=(event)=>{
     event.preventDefault()
@@ -85,7 +85,7 @@ const ShippingForm = () => {
 
       {mode===4 && <ShippingInfo title="Shipping information" handleNext={handleNext} handlePrevious={handlePrevious}  setInputValue={setInputValue} state={state} errors={errors} setState={setState} setErrors={setErrors}/> }
 
-      {mode===5 && <ReviewInfo title="Review information" handlePrevious={handlePrevious} handleSubmit={handleSubmit}/>}
+      {mode===5 && <ReviewInfo title="Review information" info={state}handlePrevious={handlePrevious} handleSubmit={handleSubmit}/>}
     </div>
   );
 }

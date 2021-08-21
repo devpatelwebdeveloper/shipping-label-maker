@@ -7,14 +7,30 @@ import Button from "../../Button"
 const ShippingInfo = ({title,handlePrevious,handleNext, setInputValue, state, errors, setState, setErrors}) => {
   let cx = classNames.bind(styles);
 
+  const changeHandler=(name,value)=>{
+    setState({
+      ...state,
+      [name]:value
+    }
+    )
+    // setErrors({
+    //   ...errors,
+    // [name]:null
+    // }
+    // )
+  }
 
   return (
     <div className={cx('step')}>
       <div className={cx('step-title')}>{title}</div>
       <div className={cx('step-form')}>
         <div className={cx('form-field')}>
-          <label htmlFor="name" className={cx('label')}>Name:</label>
-          <input type="text" id="name" className={cx('input')}/>
+          <label htmlFor="shipping" className={cx('label')}>Shipping Option:</label>
+          <select id="shipping" onChange={e=>{changeHandler('shipping',e.target.value)}}>
+            <option>Select shipping Option</option>
+            <option value="ground">Ground</option>
+            <option value="priority">Priority</option>
+          </select>
         </div>
       
       </div>
