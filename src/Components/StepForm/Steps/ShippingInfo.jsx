@@ -4,7 +4,7 @@ import styles from "../Step.module.scss"
 import Button from "../../Button"
 
 
-const ShippingInfo = ({title,handlePrevious,handleNext}) => {
+const ShippingInfo = ({title,handlePrevious,handleNext, setInputValue, state, errors, setState, setErrors}) => {
   let cx = classNames.bind(styles);
 
 

@@ -22,3 +22,16 @@ export const useVisualMode = (initial) => {
 
 	return { mode: history[history.length - 1], transition, back };
 };
+
+export const setInputValue = (name, value, setState, setErrors) => {
+	setErrors((prev) => ({
+		...prev,
+		[name]: null,
+	}));
+	setState((prev) => ({
+		...prev,
+		[name]: value,
+	}));
+};
+
+export default setInputValue;
