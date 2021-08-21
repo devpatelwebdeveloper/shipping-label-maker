@@ -6,10 +6,9 @@ function App() {
   
 
   return (
-    <div className="App">
-      <p>App</p>
+    <>
       <ShippingForm/>
-     </div>
+     </>
   )
 }
 
