@@ -1,0 +1,101 @@
+$primary-blue: #00aeef;
+$stateItemColor: #fff;
+$coverColor: #e4e4e4;
+$textColor: #939393;
+$success-green: #43ac14;
+$successStatus: #43ac14;
+$waitStatus: #381e8a;
+$failStatus: #c6171b;
+$emptyStatus: #e4e4e4;
+
+@mixin set-step-status($statusColor, $statusSymbol, $statusWidth) {
+	&::before {
+		width: $statusWidth;
+		background-color: $statusColor;
+	}
+
+	& > div {
+		background-color: $statusColor;
+
+		& i::before {
+			content: $statusSymbol;
+		}
+	}
+}
+
+.steps-bar {
+	$stepSize: 50px;
+	position: relative;
+	display: table;
+	margin: ($stepSize/2) auto;
+	table-layout: fixed;
+	height: 4px;
+	width: 600px;
+	background-color: $coverColor;
+	padding-left: 0px;
+
+	.step-item {
+		display: table-cell;
+		position: relative;
+		width: 2%;
+		text-align: center;
+		height: 4px;
+
+		&::before {
+			content: "";
+			display: block;
+			width: 0%;
+			height: 100%;
+		}
+
+		&::after {
+			content: attr(step-name);
+			position: absolute;
+			top: ($stepSize/2)+8;
+			left: 0;
+			right: 0;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+
+		& > div {
+			$border-width: 8px;
+			position: absolute;
+			top: -($stepSize / 2);
+			margin-left: -($border-width * 3);
+			display: inline-block;
+			width: $stepSize;
+			height: $stepSize;
+			border-color: #fff;
+			border-style: solid;
+			// border-width: 0 $border-width 0 $border-width;
+			border-radius: 50%;
+			line-height: $stepSize;
+			text-align: center;
+			font-size: 1em;
+			color: $stateItemColor;
+		}
+
+		&.wait {
+			@include set-step-status($primary-blue, "\f0c3", 100%);
+		}
+
+		&.success {
+			@include set-step-status($success-green, "\f00c", 100%);
+		}
+
+		&.fail {
+			@include set-step-status($failStatus, "\f05e", 50%);
+		}
+
+		&.empty {
+			@include set-step-status($coverColor, "\f017", 0%);
+		}
+	}
+}
+
+.custom-container {
+	width: 100%;
+	margin: 30px auto;
+	padding-bottom: 20px;
+}

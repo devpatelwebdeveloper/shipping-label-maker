@@ -4,7 +4,7 @@ import styles from "../Step.module.scss"
 import Button from "../../Button"
 
 
-const ReviewInfo = ({title,handlePrevious,handleNext}) => {
+const ReviewInfo = ({title,handlePrevious,handleSubmit}) => {
   let cx = classNames.bind(styles);
   
 
@@ -20,7 +20,7 @@ const ReviewInfo = ({title,handlePrevious,handleNext}) => {
       </div>
     <div className={cx('button-container')}>
       <Button text="Previous" theme="secondary" onClick={handlePrevious}/>
-      <Button text="Next" theme="primary" onClick={handleNext}/>
+      <Button text="Print" theme="primary" onClick={handleSubmit}/>
     </div>
     </div>
     
