@@ -1,5 +1,5 @@
 import React from 'react'
-import ShippingForm from "./Components/StepForm/"
+import ShippingForm from "./Components/ShippingForm"
 
 function App() {
   

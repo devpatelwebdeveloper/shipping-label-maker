@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react';
-import { PackageInfo, ReviewInfo, RecieverStep, SenderStep,ShippingInfo } from "./Steps"
+import { PackageInfo, ReviewInfo, RecieverStep, SenderStep,ShippingInfo } from "../Steps"
 import Label from "../Label"
 import ProgressBar from "../ProgressBar"
 import { useVisualMode,setInputValue } from '../../Utils';

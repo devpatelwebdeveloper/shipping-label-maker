@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames/bind';
-import styles from "../Step.module.scss"
-import Button from "../../Button"
+import styles from "./Step.module.scss"
+import Button from "../Button"
 
 
 const PackageInfo = ({title,handlePrevious,handleNext, setInputValue, state, errors, setState, setErrors}) => {

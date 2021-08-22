@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import classNames from 'classnames/bind';
-import styles from "../Step.module.scss"
-import Button from "../../Button"
+import styles from "./Step.module.scss"
+import Button from "../Button"
 
 const ReviewInfo = ({title,info,handlePrevious,handleSubmit}) => {
   let cx = classNames.bind(styles);
