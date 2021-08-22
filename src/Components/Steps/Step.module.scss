@@ -9,9 +9,8 @@
 }
 .input {
 	margin: 0 8px;
-	&.full {
-		width: 100%;
-	}
+	width: 100%;
+	height: 24px;
 }
 .step-title {
 	color: #00aeef;
@@ -41,10 +40,7 @@
 	font-size: 1rem;
 	line-height: 1;
 }
-.input {
-	width: 100%;
-	padding: 0 16px;
-}
+
 .button-container {
 	display: flex;
 	flex-direction: row;
