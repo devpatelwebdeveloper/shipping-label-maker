@@ -25,8 +25,8 @@ const PackageInfo = ({title,handlePrevious,handleNext, setInputValue, state, err
       <div className={cx('step-title')}>{title}</div>
       <div className={cx('step-form')}>
         <div className={cx('form-field')}>
-          <label htmlFor="name" className={cx('label')}>Name:</label>
-          <input type="text" id="name" className={cx('input')} onChange={e=>{changeHandler('weight',e.target.value)}}/>
+          <label htmlFor="packageWeight" className={cx('label')}>Package Weight (in LBS):</label>
+          <input type="number" id="packageWeight" className={cx('input')} value={state.weight} onChange={e=>{changeHandler('weight',e.target.value)}}/>
         </div>
       
       </div>
