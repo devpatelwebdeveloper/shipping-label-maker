@@ -13,12 +13,7 @@ const ProgressBar = ({steps}) => {
             id={step.stepId}
             key={step.stepId}
             className={cx('step-item',step.stepSuccess)}
-            step-name={step.stepName}
-          >
-            <div>
-              <span className={cx('stepIcon')}>{step.stepIcon}</span>
-            </div>
-          </li>
+          ></li>
         )
       })}
     </ul>

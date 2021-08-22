@@ -37,49 +37,47 @@ const ShippingForm = () => {
     event.preventDefault()
     transition(mode - 1)    
   }
+  const handleSubmit = (e)=>{
+    e.preventDefault();
+    setConfirmed(true)
+    transition(mode + 1)
+  }
 
   // Progress Bar Steps
   const steps = [
     {
-      stepSuccess: mode === 1 || mode > 1 ? "wait" : "empty",
+      stepSuccess: mode === 1? 'wait' : mode > 1 ? "success":"empty",
       stepId: "step-1",
-      stepName: "Senders",
-      stepIcon: sender,
+      
     },
     {
-      stepSuccess: mode === 2 || mode > 2 ? "wait" : "empty",
+      stepSuccess: mode === 2? 'wait' : mode > 2 ? "success" : "empty",
       stepId: "step-2",
-      stepName: "Reciever",
-      stepIcon: sender,
+      
     },
     {
-      stepSuccess: mode === 3 || mode > 3 ? "wait" : "empty",
+      stepSuccess: mode === 3? 'wait' : mode > 3 ? "success" : "empty",
       stepId: "step-3",
-      stepName: "Package",
-      stepIcon: sender,
+      
     },
     {
-      stepSuccess: mode === 4 || mode > 4 ? "wait" : "empty",
+      stepSuccess: mode === 4? 'wait' : mode > 4 ? "success" : "empty",
       stepId: "step-4",
-      stepName: "Shipping",
-      stepIcon: sender,
+      
     },
     {
-      stepSuccess: mode === 5 || mode > 5 ? "wait" : "empty",
-      stepId: "step-5",
-      stepName: "Verify",
-      stepIcon: sender,
-    },
+      stepSuccess: mode === 5? 'wait' : mode > 5 ? "success" : "empty",
+      stepId: "step-5", 
+    },   
   ]
 
-  const handleSubmit = (e)=>{
-    e.preventDefault();
-    setConfirmed(true)
-
-  }
+  
   if(confirmed){
     return(
+      <>
+      <ProgressBar steps={steps}/>
       <Label info={state} />
+      </>
     )
   }
 
