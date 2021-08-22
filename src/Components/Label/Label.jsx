@@ -32,7 +32,7 @@ const Label = ({info}) => {
         </div>
       </div>
       <div className={cx('tracking-barcode')}>
-        <span className={cx('shipping-priority')}>Shipping Priority: {info.shippingOption===1? 'Ground':'Priority'}</span>
+        <span className={cx('shipping-priority')}>Shipping Method: <u>{info.shippingOption===1? 'Ground':'Priority'}</u></span>
           <Barcode value={tracking} style={{maxWidth:'600px'}} />
           </div>
 
