@@ -3,7 +3,6 @@ import { PackageInfo, ReviewInfo, RecieverStep, SenderStep,ShippingInfo } from "
 import Label from "../Label"
 import ProgressBar from "../ProgressBar"
 import { useVisualMode,setInputValue } from '../../Utils';
-import {sender} from "./icons"
 const ShippingForm = () => {
 
   const [state, setState] = useState({
