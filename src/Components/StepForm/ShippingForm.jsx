@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from 'react';
 import { PackageInfo, ReviewInfo, RecieverStep, SenderStep,ShippingInfo } from "./Steps"
+import Label from "../Label"
 import ProgressBar from "../ProgressBar"
 import { useVisualMode,setInputValue } from '../../Utils';
 import {sender} from "./icons"
@@ -7,24 +8,25 @@ const ShippingForm = () => {
 
   const [state, setState] = useState({
     from: {
-      name: "Devashish Patel",
-      street: "110 Activa Ave",
-      city: "Kitchener",
-      state: "ON",
-      zip: "12345",
+      name: "",
+      street: "",
+      city: "",
+      state: "",
+      zip: "",
     },
     to: {
-      name: "Khushbu Patel",
-      street: "1430 Highland Road W",
-      city: "Kitchener",
-      state: "ON",
-      zip: "12345",
+      name: "",
+      street: "",
+      city: "",
+      state: "",
+      zip: "",
     },
-    weight: 10.6,
-    shippingOption: 1.5,
+    weight: 0,
+    shippingOption: 0,
   })
   const [errors, setErrors] = useState()
-  const { mode, transition } = useVisualMode(5)
+  const [confirmed,setConfirmed]=useState(false)
+  const { mode, transition } = useVisualMode(1)
 
   const handleNext=(event)=>{
     event.preventDefault()
@@ -36,10 +38,6 @@ const ShippingForm = () => {
     transition(mode - 1)    
   }
 
-  const handleSubmit=(event)=>{
-    event.preventDefault()
-     
-  }
   // Progress Bar Steps
   const steps = [
     {
@@ -73,6 +71,17 @@ const ShippingForm = () => {
       stepIcon: sender,
     },
   ]
+
+  const handleSubmit = (e)=>{
+    e.preventDefault();
+    setConfirmed(true)
+
+  }
+  if(confirmed){
+    return(
+      <Label info={state} />
+    )
+  }
 
   return (
     <div>
