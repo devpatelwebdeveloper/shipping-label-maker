@@ -32,9 +32,9 @@ Green (Completed) Step
 
 ## Some of the packages that this project is using:
 
-    - [react-barcode  -  npm](https://www.npmjs.com/package/react-barcode)
-    - [classnames  -  npm](https://www.npmjs.com/package/classnames)
-    - [sass  -  npm](https://www.npmjs.com/package/sass)
+- [react-barcode](https://www.npmjs.com/package/react-barcode)
+- [classnames](https://www.npmjs.com/package/classnames)
+- [sass](https://www.npmjs.com/package/sass)
 
 ## Work in progress:
 
