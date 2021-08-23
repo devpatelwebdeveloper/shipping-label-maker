@@ -12,11 +12,11 @@ Its fast any optimizes build in better way
 ├── vite.config.js
 ├── src
 │   ├── Components
-│       ├── Button
-│       ├── Label
-│       ├── ProgressBar
-│       ├── ShippingForm // Main Component
-│       ├── Steps // All the steps
+│   |   ├── Button
+│   |   ├── Label
+│   |   ├── ProgressBar
+│   |   ├── ShippingForm // Main Component
+│   |   └── Steps // All the steps
 │   └── Utils // All the custom hooks and custom helper functions
 │   └── App.jsx
 │   └── index.css
@@ -38,5 +38,5 @@ Green (Completed) Step
 
 ## Work in progress:
 
-[ ] Validation
-[ ] Unit test
+- [ ] Validation
+- [ ] Unit test
