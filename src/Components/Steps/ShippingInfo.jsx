@@ -26,8 +26,8 @@ const ShippingInfo = ({title,handlePrevious,handleNext, setInputValue, state, er
       <div className={cx('step-form')}>
         <div className={cx('form-field')}>
           <label htmlFor="shipping" className={cx('label')}>Shipping Option:</label>
-          <select id="shipping" defaultValue={state.shippingOption} onChange={e=>{changeHandler('shippingOption',e.target.value)}}>
-            <option value="" selected>Select shipping Option</option>
+          <select id="shipping" value={state.shippingOption} onChange={e=>{changeHandler('shippingOption',e.target.value)}}>
+            <option value="" defaultValue>Select shipping Option</option>
             <option value="1">Ground</option>
             <option value="1.5">Priority</option>
           </select>

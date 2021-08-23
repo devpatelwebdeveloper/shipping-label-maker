@@ -46,7 +46,7 @@ const SenderStep = ({title,handleNext, state, errors, setState, setErrors}) => {
         <div className={cx('form-field','half')}>
           <label htmlFor="state" className={cx('label')}>State:</label>
           <select id="state" className={cx('input')} defaultValue={state.from.state} onChange={e=>{changeHandler('state',e.target.value)}}>
-            <option value="" selected>Select State</option>
+            <option value="" defaultValue>Select State</option>
             {stateList.map((st,index)=>{
               return(
                 <option value={st} key={index}>{st}</option>    
